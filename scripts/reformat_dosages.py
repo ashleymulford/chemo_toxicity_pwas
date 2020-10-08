@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#Convert predixcan doasges with rsid (or any other id type) to chr#:pos id type for use with prot models
 
 import gzip
 import re
