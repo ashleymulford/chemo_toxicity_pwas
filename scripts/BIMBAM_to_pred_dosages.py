@@ -10,8 +10,8 @@ import argparse #allows for input of command line arguments
 parser = argparse.ArgumentParser() #open the parser
 parser.add_argument("--anno", type = str, action = "store", dest = "anno", required = True, help = "Input annotation file")
 parser.add_argument("--BIMBAM", type = str, action = "store", dest = "BIMBAM", required = True, help = "Input BIMBAM file")
-parser.add_argument("--output1", type = str, action = "store", dest = "output", required = False, default = "dosages1.txt", help = "Output dosage file")
-parser.add_argument("--output2", type = str, action = "store", dest = "output", required = False, default = "dosages2.txt", help = "Output dosage file")
+parser.add_argument("--output1", type = str, action = "store", dest = "output1", required = False, default = "dosages1.txt", help = "Output dosage file")
+parser.add_argument("--output2", type = str, action = "store", dest = "output2", required = False, default = "dosages2.txt", help = "Output dosage file")
 args = parser.parse_args() #parse given arguments
 
 anno = open(args.anno, "r") #open anno file
@@ -34,7 +34,7 @@ for anno_line, BIMBAM_line in zip(anno, BIMBAM): #go through each line in anno a
         #A1 becomes A2 and A2 becomes A1 in output (pred dosages must be of second allele listed)
         dosage_format1 = (chr + "\t" + rs_anno + "\t" + bp + "\t" + A2 + "\t" + A1 + "\t" + AF + "\t" + dosages_str + "\n") #make all variables into PrediXcan dosage format (rsids)
         output1.write(dosage_format1) #write to output1 file
-        dosage_format2 = ("chr" + chr + "\t" + "chr" + chr + ":" + pos + "\t" + bp + "\t" + A2 + "\t" + A1 + "\t" + AF + "\t" + dosages_str + "\n") #make all variables into PrediXcan dosage format (chr:pos ids)
+        dosage_format2 = ("chr" + chr + "\t" + "chr" + chr + ":" + bp + "\t" + bp + "\t" + A2 + "\t" + A1 + "\t" + AF + "\t" + dosages_str + "\n") #make all variables into PrediXcan dosage format (chr:pos ids)
         output2.write(dosage_format2) #write to output2 file
 
 anno.close() #close anno file
