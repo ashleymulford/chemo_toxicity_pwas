@@ -16,7 +16,7 @@ for line in input: #go through each line in input
     (chr, pos) = line_list[0:2] #assign chr and pos from line to a variable
     rest = line_list[2:] #assign last part of line to variable
     dosages_str = "\t".join(rest) #create string of rest separate by tabs
-    dosage_format = (chr + "\t" + chr + ":" + pos + "\t" + dosages_str + "\n") #make all variables into PrediXcan dosage format (chr:pos ids)
+    dosage_format = (chr + "\t" + chr + ":" + pos + "\t" + pos + "\t" + dosages_str + "\n") #make all variables into PrediXcan dosage format (chr:pos ids)
     output.write(dosage_format) #write to output file
 
 input.close() #close anno file
