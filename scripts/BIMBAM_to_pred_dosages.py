@@ -4,6 +4,7 @@
 #For this script, A1 from BIMBAM will become A2 for predixcan dosages, as the BIMBAM have the dose of A1
 #will output as A2 A1 freq(A1) dose(A1), so that A1 becomes A2 (the second allele in the file)
 #this script makes two output files, one with rsids and one with chr:pos ids - split by chr afterwards
+    #use awk command: awk '$1 == #' dosages.txt > chr#.txt, where # is 1 through 22, run 22 times
 
 from __future__ import division #because python 2 doesn't like real numbers
 import argparse #allows for input of command line arguments
