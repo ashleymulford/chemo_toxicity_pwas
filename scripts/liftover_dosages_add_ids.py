@@ -5,7 +5,7 @@
 import argparse #allows for input of command line arguments
 parser = argparse.ArgumentParser() #open the parser
 parser.add_argument("--input", type = str, action = "store", dest = "input", required = True, help = "Input file")
-parser.add_argument("--output", type = str, action = "store", dest = "output", required = False, default = "dosages.txt", help = "Output dosage file"))
+parser.add_argument("--output", type = str, action = "store", dest = "output", required = False, default = "dosages.txt", help = "Output dosage file")
 args = parser.parse_args() #parse given arguments
 
 input = open(args.input, "r") #open input file
