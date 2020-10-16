@@ -19,4 +19,4 @@
 
 
 #lifted.txt output file will contain that same four columns as input, with positions lifted to new build but ids from preliftover
-#use Rscript to join output with main geno file to get new positions
+#use Rscript to join output with main geno file to get new positions (column 2 in lifted.txt)
