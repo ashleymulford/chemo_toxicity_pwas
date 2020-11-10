@@ -3,7 +3,7 @@
 
 #Import necessary libraries
 library(data.table)
-library(dpylr)
+library(dplyr)
 library(tibble)
 
 #Create function to paste in drug name
