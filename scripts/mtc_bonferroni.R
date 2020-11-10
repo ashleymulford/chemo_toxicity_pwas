@@ -1,3 +1,6 @@
+#Multiple Testing Correction for Association Results with Bonferroni and BH FDR
+#Perform for all populations
+
 #Import necessary libraries
 library(data.table)
 library(dpylr)
