@@ -29,10 +29,15 @@ for(drug in drug_list){
 }
 
 all_sig<-subset(all_assoc, pvalues_adjusted_BH < .75)
+most_sig<-subset(all_assoc, pvalues_adjusted_BH < .1)
+BF_sig<-subset(all_assoc, pvalues_adjusted_bonferroni < .05)
+
 
 #Output data frames into directory
 fwrite(all_assoc, "/home/ashley/LCL_chemotherapy/YRI/YRI_pwas_results/adj_assoc_output/YRI_allassoc_PAV_filtered_WG_baseline_rho0.1_zpval0.05.adj.txt", na = "NA", quote = F, sep = "\t", col.names = T) 
 fwrite(all_sig, "/home/ashley/LCL_chemotherapy/YRI/YRI_pwas_results/adj_assoc_output/YRI_sig_PAV_filtered_WG_baseline_rho0.1_zpval0.05.adj.txt", na = "NA", quote = F, sep = "\t", col.names = T) 
+fwrite(most_sig, "/home/ashley/LCL_chemotherapy/YRI/YRI_pwas_results/adj_assoc_output/YRI_most_sig_PAV_filtered_WG_baseline_rho0.1_zpval0.05.adj.txt", na = "NA", quote = F, sep = "\t", col.names = T) 
+fwrite(BF_sig, "/home/ashley/LCL_chemotherapy/YRI/YRI_pwas_results/adj_assoc_output/YRI_BFsig_PAV_filtered_WG_baseline_rho0.1_zpval0.05.adj.txt", na = "NA", quote = F, sep = "\t", col.names = T) 
 
 
 
