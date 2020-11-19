@@ -14,7 +14,7 @@ for drug in ${drugs[@]}
   do
   for model in ${models[@]}
     do
-    /usr/local/bin/gemma -g /home/ashley/LCL_chemotherapy/CEU/CEU_pwas_results/association_input/CEU_PCAIR_PAV_filtered_${model}_baseline_rho0.1_zpval0.05_gemma.txt -notsnp -p /home/ashley/LCL_chemotherapy/CEU/CEU_phenotypes/CEU_${drug}_bestpheno_noids.txt -k /home/ashley/LCL_chemotherapy/CEU/CEU_relationship_matrix_maf.cXX.txt -lmm 4 -o CEU_${drug}_PCAIR_PAV_filtered_${model}_baseline_rho0.1_zpval0.05
+    /usr/local/bin/gemma -g /home/ashley/LCL_chemotherapy/YRI/YRI_pwas_results/association_input/YRI_PCAIR_PAV_filtered_${model}_baseline_rho0.1_zpval0.05_gemma.txt -notsnp -p /home/ashley/LCL_chemotherapy/YRI/YRI_phenotypes/YRI_${drug}_bestpheno_noids.txt -k /home/ashley/LCL_chemotherapy/YRI/YRI_relationship_matrix_maf.cXX.txt -lmm 4 -o YRI_${drug}_PCAIR_PAV_filtered_${model}_baseline_rho0.1_zpval0.05
   done
 done
 
