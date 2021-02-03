@@ -5,14 +5,14 @@ library(tibble)
 #Create function to paste in tissue name
 "%&%" = function(a,b) paste(a,b,sep="")
 
-#Create list of tissues for file input
+#Create list of model for file input
 model_list <- c("ALL", "AFA", "CAU", "CHN", "HIS")
 drug_list <- c("arac", "cape", "carbo", "cis", "dauno", "etop", "pacl", "peme")
 
 
-#Make a data frame with all results from each tissue per drug per pop
+#Make a data frame with all results from each model per drug per pop
   #Read in file
-  #Add column containing tissue name
+  #Add column containing model name
   #Compile significant subsets into single data frame
 for(drug in drug_list){
   for(model in model_list){
