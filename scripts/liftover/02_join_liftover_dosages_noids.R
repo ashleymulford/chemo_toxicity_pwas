@@ -19,5 +19,4 @@ dosages_38$V3.y<-NULL
 dosages_38$V4<-NULL
 
 #dosage file has no ids, will add with python 
-fwrite(dosages_38, "/home/ashley/LCL_chemotherapy/YRI/YRI_predixcan_dosages/build_38/dosages_b38_no_ids.txt", sep = "\t", col.names >
-
+fwrite(dosages_38, "/home/ashley/LCL_chemotherapy/YRI/YRI_predixcan_dosages/build_38/dosages_b38_no_ids.txt", sep = "\t", col.names = F, quote = F)
